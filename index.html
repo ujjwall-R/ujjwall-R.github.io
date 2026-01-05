@@ -70,9 +70,17 @@
           <hr class="soft">
 
           <!-- BOOKS -->
-          <button style="border:0;background:none;font-size:24px;" data-toggle="collapse" data-target="#books">
-            <b>Books</b>
-          </button>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <button style="border:0;background:none;font-size:24px;" data-toggle="collapse" data-target="#books">
+              <b>Books</b>
+            </button>
+            <select id="sort-select">
+              <option value="">Sort by Rating</option>
+              <option value="Beginner friendly">Beginner friendly</option>
+              <option value="Conceptual depth">Conceptual depth</option>
+              <option value="Practical applicability">Practical applicability</option>
+            </select>
+          </div>
 
           <div id="books" class="collapse in">
             <table style="width:100%;padding:20px;">
@@ -274,9 +282,14 @@
       return `<span style="color:#f5c518;">${s}</span>`;
     }
 
-    function renderBooks() {
+    function renderBooks(sortKey = "") {
       const c = document.getElementById("books-container");
-      books.forEach(b => {
+      let sortedBooks = [...books];
+      if (sortKey) {
+        sortedBooks.sort((a, b) => b.ratings[sortKey] - a.ratings[sortKey]);
+      }
+      c.innerHTML = "";
+      sortedBooks.forEach(b => {
         const ratings = Object.entries(b.ratings)
           .map(([k, v]) => `<div><b>${k}:</b> ${stars(v)}</div>`)
           .join("");
@@ -322,6 +335,11 @@
     document.addEventListener("DOMContentLoaded", () => {
       renderBooks();
       renderBlogs();
+
+      const sortSelect = document.getElementById("sort-select");
+      sortSelect.addEventListener("change", () => {
+        renderBooks(sortSelect.value);
+      });
     });
   </script>
 
