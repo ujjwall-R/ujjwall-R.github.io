@@ -75,7 +75,7 @@
               <b>Books</b>
             </button>
             <select id="sort-select">
-              <option value="">Sort by Rating</option>
+              <option value="">Sort (Default)</option>
               <option value="Beginner friendly">Beginner friendly</option>
               <option value="Conceptual depth">Conceptual depth</option>
               <option value="Practical applicability">Practical applicability</option>
@@ -118,134 +118,145 @@
     const books = [
       {
         title: "Clean Code",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "Improves the practice of writing good and clean code. It helps junior engineers ship code to production faster. A must-read for all beginners.",
         ratings: {
           "Beginner friendly": 5,
           "Conceptual depth": 3,
           "Practical applicability": 4
         },
-        tags: ["design", "systems"],
+        tags: ["software-engineering", "code-quality", "best-practices", "maintainability"],
         image: "images/ccode.png"
       },
       {
         title: "Clean Architecture",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "One of the best and few resources that explains the SOLID principles in detail. Uncle Bob presents a unique and effective way of organizing a codebase.",
         ratings: {
           "Beginner friendly": 5,
           "Conceptual depth": 4,
           "Practical applicability": 4
         },
-        tags: ["design", "systems"],
+        tags: ["software-architecture", "design-principles", "clean-architecture", "scalability"],
         image: "images/carch.png"
       },
       {
         title: "Designing Data-Intensive Applications",
-        about: "Covers scalable, reliable, and maintainable distributed systems.",
+        about: "Covers scalable, reliable, and maintainable distributed systems. A single resource for almost everything about distributed systems. I believe it is worth reading twice or even thrice (my personal opinion).",
         ratings: {
           "Beginner friendly": 2,
           "Conceptual depth": 5,
-          "Practical applicability": 5
+          "Practical applicability": 3
         },
-        tags: ["systems", "databases", "architecture"],
+        tags: ["distributed-systems", "databases", "scalability", "system-design"],
         image: "images/ddia.png"
       },
       {
         title: "The Art of Statistics: Learning from Data",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "An interesting book where the author shows how data speaks in day-to-day life, even before the advent of strong AI tools. The story of data analysis is engaging. It requires a good interest in maths and probability to fully enjoy it.",
         ratings: {
           "Beginner friendly": 4,
           "Conceptual depth": 3,
           "Practical applicability": 2
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["statistics", "data-analysis", "probability", "data-literacy"],
         image: "images/artofstat.png"
       },
       {
         title: "System Design Series by Alex Xu",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "Although it is positioned as an interview resource, I personally loved the way Alex lucidly explains the requirements of building good backend systems. A must-read for all backend developers.",
         ratings: {
           "Beginner friendly": 5,
-          "Conceptual depth": 4,
-          "Practical applicability": 4
+          "Conceptual depth": 3,
+          "Practical applicability": 3
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["system-design", "scalable-systems", "backend-engineering", "interview-prep"],
         image: "images/alexxu.png"
       },
       {
         title: "Linux From Scratch",
-        about: "Build a Linux OS manually to understand internals deeply.",
+        about: "Build a Linux OS manually to understand its internals deeply. This feels more like documentation and a hands-on journey.",
         ratings: {
           "Beginner friendly": 1,
-          "Conceptual depth": 5,
+          "Conceptual depth": 4,
           "Practical applicability": 4
         },
-        tags: ["linux", "os", "systems"],
+        tags: ["operating-systems", "linux-internals", "low-level", "systems-programming"],
         image: "images/LFS.png"
       },
       {
         title: "Linux System Programming: Talking Directly to the Kernel and C Library",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "A good resource to understand the fundamentals of system programming in C and the interfaces of the kernel. This book is not related to kernel development.",
         ratings: {
-          "Beginner friendly": 3,
-          "Conceptual depth": 3,
-          "Practical applicability": 4
+          "Beginner friendly": 2,
+          "Conceptual depth": 4,
+          "Practical applicability": 3
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["linux", "system-programming", "kernel", "c-programming"],
         image: "images/linuxsp.png"
       },
       {
         title: "Understanding Distributed Systems",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "I recommend this book to everyone who wants to read Martin Kleppmann's DDIA. It is a very good starting point before the Red Book.",
         ratings: {
           "Beginner friendly": 4,
           "Conceptual depth": 5,
           "Practical applicability": 4
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["distributed-systems", "consistency", "fault-tolerance", "system-architecture"],
         image: "images/uds.png"
       },
       {
-        title: "Domain-Driven Design",
-        about: "Loren Ipsum one or two line description of the book.",
+        title: "Righting Software",
+        about: "This book is divided into two parts—System Design and Project Management. Juval Lowey introduces volatility-based decomposition as an alternative to functional decomposition. It is a fantastic read. The second part is pending for my second read.",
         ratings: {
           "Beginner friendly": 3,
-          "Conceptual depth": 5,
+          "Conceptual depth": 3,
           "Practical applicability": 5
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["system-design", "project-management"],
+        image: "images/rs.png"
+      },
+      {
+        title: "Domain-Driven Design",
+        about: "A must-read for all software developers. A senior architect recommended it to me, and I am always thankful. It will improve your skills in detailed design.",
+        ratings: {
+          "Beginner friendly": 3,
+          "Conceptual depth": 3,
+          "Practical applicability": 5
+        },
+        tags: ["domain-driven-design", "software-modeling", "architecture", "enterprise-systems"],
         image: "images/ddd.png"
       },
       {
         title: "Build a Large Language Model (From Scratch)",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "Recommended for anyone who has the zeal to understand how modern-day LLMs function. The author builds a GPT-2 model in the book, making it a hands-on experience. One big advantage is that it gives you a strong head start in understanding research papers published by Gemini, OpenAI, or Meta, making those reads more satisfying.",
         ratings: {
           "Beginner friendly": 2,
           "Conceptual depth": 5,
           "Practical applicability": 1
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["machine-learning", "deep-learning", "llms", "neural-networks"],
         image: "images/llmfromscratch.png"
       },
       {
         title: "The Hundred-page Machine Learning Book",
-        about: "Loren Ipsum one or two line description of the book.",
+        about: "I read this during college. It is a good beginner resource for anyone who wants to learn the basics of AI and ML. Make sure to take notes or at least underline important sections. You will not regret reading it if you have an interest in basic maths.",
         ratings: {
           "Beginner friendly": 5,
-          "Conceptual depth": 4,
+          "Conceptual depth": 5,
           "Practical applicability": 3
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["machine-learning", "ml-fundamentals", "overview", "data-science"],
         image: "images/100pgML.png"
       },
       {
-        title: "Cracking the coding interview",
-        about: "Loren Ipsum one or two line description of the book.",
+        title: "Cracking the Coding Interview",
+        about: "Recommended for beginners targeting algorithm interviews. A good resource to cover the basics of OOP.",
         ratings: {
           "Beginner friendly": 5,
           "Conceptual depth": 5,
           "Practical applicability": 1
         },
-        tags: ["ML/AI", "data science"],
+        tags: ["data-structures", "algorithms", "interview-prep", "problem-solving"],
         image: "images/cci.png"
       }
     ];
