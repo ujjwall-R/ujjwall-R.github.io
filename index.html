@@ -80,12 +80,19 @@
             <button style="border:0;background:none;font-size:24px;" data-toggle="collapse" data-target="#books">
               <b>Books</b>
             </button>
-            <select id="sort-select">
-              <option value="">Sort (Default)</option>
-              <option value="Beginner friendly">Beginner friendly</option>
-              <option value="Conceptual depth">Conceptual depth</option>
-              <option value="Practical applicability">Practical applicability</option>
-            </select>
+            <div>
+              <select id="type-select" style="margin-right: 10px;">
+                <option value="Tech">Tech (Default)</option>
+                <option value="NonTech">Non-Tech</option>
+                <option value="All">All</option>
+              </select>
+              <select id="sort-select">
+                <option value="">Sort (Default)</option>
+                <option value="Beginner friendly">Beginner friendly</option>
+                <option value="Conceptual depth">Conceptual depth</option>
+                <option value="Practical applicability">Practical applicability</option>
+              </select>
+            </div>
           </div>
 
           <div id="books" class="collapse in">
@@ -121,7 +128,7 @@
      DATA
 ========================= -->
   <script>
-    const books = [
+    const techBooks = [
       {
         title: "Designing Data-Intensive Applications",
         about: "Covers scalable, reliable, and maintainable distributed systems. A single resource for almost everything about distributed systems. I believe it is worth reading twice or even thrice (my personal opinion).",
@@ -267,6 +274,31 @@
       }
     ];
 
+    const nonTechBooks = [
+      {
+        title: "Zero to One: Notes on Startups, or How to Build the Future",
+        about: "A naive explanation that encourages a builder mentality by the PayPal founder. A popular Bangalore-based founder recommended this book to me for my 2026 reading list, and I am glad I picked it.",
+        ratings: {
+          "Beginner friendly": 5,
+          "Conceptual depth": 2,
+          "Practical applicability": 3
+        },
+        tags: ["startup", "business", "entrepreneurship"],
+        image: "images/0to1.png"
+      },
+      {
+        title: "Truth Without Apology: For Those Tired of Sweet Lies",
+        about: "Bought this at Mumbai Airport and I am forever grateful. The more you read, the more your ego breaks down. The short chapters awaken something within you.",
+        ratings: {
+          "Beginner friendly": 5,
+          "Conceptual depth": 3,
+          "Practical applicability": 4
+        },
+        tags: ["philosophy", "self-awareness", "ego"],
+        image: "images/twa.png"
+      }
+    ];
+
     const blogs = [
       {
         title: "The System Design Series",
@@ -299,14 +331,16 @@
       return `<span style="color:#f5c518;">${s}</span>`;
     }
 
-    function renderBooks(sortKey = "") {
+    function renderBooks(sortKey = "", typeFilter = "Tech") {
       const c = document.getElementById("books-container");
-      let sortedBooks = [...books];
+      let filteredBooks = typeFilter === "Tech" ? [...techBooks] : typeFilter === "NonTech" ? [...nonTechBooks] : [...techBooks, ...nonTechBooks];
+
       if (sortKey) {
-        sortedBooks.sort((a, b) => b.ratings[sortKey] - a.ratings[sortKey]);
+        filteredBooks.sort((a, b) => b.ratings[sortKey] - a.ratings[sortKey]);
       }
+
       c.innerHTML = "";
-      sortedBooks.forEach(b => {
+      filteredBooks.forEach(b => {
         const ratings = Object.entries(b.ratings)
           .map(([k, v]) => `<div><b>${k}:</b> ${stars(v)}</div>`)
           .join("");
@@ -316,19 +350,19 @@
           .join("");
 
         c.innerHTML += `
-      <tr>
-        <td style="width:25%;padding:10px;">
-          <img src="${b.image}" width="100">
-        </td>
-        <td style="width:75%;padding:10px;">
-          <big><b>${b.title}</b></big>
-          <p>${b.about}</p>
-          ${ratings}
-          <br>${tags}
-        </td>
-      </tr>
-      <tr><td colspan="2" style="height:30px;"></td></tr>
-    `;
+          <tr>
+            <td style="width:25%;padding:10px;">
+              <img src="${b.image}" width="100">
+            </td>
+            <td style="width:75%;padding:10px;">
+              <big><b>${b.title}</b></big>
+              <p>${b.about}</p>
+              ${ratings}
+              <br>${tags}
+            </td>
+          </tr>
+          <tr><td colspan="2" style="height:30px;"></td></tr>
+        `;
       });
     }
 
@@ -350,13 +384,18 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+      const typeSelect = document.getElementById("type-select");
+      const sortSelect = document.getElementById("sort-select");
+
+      const updateBooks = () => {
+        renderBooks(sortSelect.value, typeSelect.value);
+      };
+
+      typeSelect.addEventListener("change", updateBooks);
+      sortSelect.addEventListener("change", updateBooks);
+
       renderBooks();
       renderBlogs();
-
-      const sortSelect = document.getElementById("sort-select");
-      sortSelect.addEventListener("change", () => {
-        renderBooks(sortSelect.value);
-      });
     });
   </script>
 
