@@ -399,6 +399,63 @@
     });
   </script>
 
+  <script src="js/ad.js"></script>
+
+  <script>
+    function renderAd() {
+      const adContainer = document.createElement("div");
+      adContainer.id = "ad-section";
+      adContainer.style = "margin: 20px auto; text-align: center; max-width: 600px;";
+
+      if (ads.length > 0) {
+        const ad = ads[0]; // Assuming only one ad for now
+
+        const adContent = `
+          <div style="border: 1px solid #ccc; padding: 10px; display: flex; align-items: center;">
+            <img src="${ad.image}" alt="${ad.title}" style="width: 150px; height: auto; margin-right: 20px;">
+            <div style="text-align: left;">
+              <span style="color: gray; font-size: 12px; font-weight: bold;">Sponsored</span>
+              <h3 style="margin: 5px 0;">${ad.title}</h3>
+              <p style="margin: 5px 0;">${ad.description}</p>
+              ${ad.url ? `<a href="${ad.url}" target="_blank" style="color: blue; text-decoration: underline;">Learn More</a>` : `<span style="color: gray;">Stay Tuned!</span>`}
+            </div>
+          </div>
+        `;
+
+        adContainer.innerHTML = adContent;
+        document.body.insertBefore(adContainer, document.body.firstChild);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderAd();
+
+      // Add responsiveness for mobile devices
+      const style = document.createElement("style");
+      style.innerHTML = `
+        @media (max-width: 600px) {
+          #ad-section div {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          #ad-section img {
+            margin: 0 0 10px 0;
+            width: 100px;
+          }
+
+          #ad-section h3 {
+            font-size: 18px;
+          }
+
+          #ad-section p {
+            font-size: 14px;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    });
+  </script>
 </body>
 
 </html>
