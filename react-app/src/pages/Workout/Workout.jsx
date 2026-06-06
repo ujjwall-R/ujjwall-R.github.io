@@ -16,6 +16,11 @@ function useGymStats() {
 export default function Workout() {
   const { punched, totalDays } = useGymStats()
 
+  const allStats = [
+    { value: `${punched}/${totalDays}`, label: 'Days in gym' },
+    ...staticStats,
+  ]
+
   return (
     <div className={styles.page}>
 
@@ -33,36 +38,30 @@ export default function Workout() {
           ))}
         </div>
         <div className={styles.overlay} />
+
         <div className={styles.heroContent}>
-          <p className={styles.eyebrow}>Active life</p>
-          <h1 className={styles.heroTitle}>Sweat.</h1>
-          <p className={styles.heroSub}>The only competition is yesterday's me.</p>
-          <div className={styles.activities}>
-            {activities.map(a => (
-              <span key={a.name} className={styles.activityPill}>
-                {a.icon} {a.name}
-              </span>
+          <div className={styles.heroTop}>
+            <p className={styles.eyebrow}>Active life</p>
+            <h1 className={styles.heroTitle}>Sweat.</h1>
+            <p className={styles.heroSub}>The work doesn't stop at the desk.</p>
+            <div className={styles.activities}>
+              {activities.map(a => (
+                <span key={a.name} className={styles.activityPill}>
+                  {a.icon} {a.name}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Stats bar inside hero */}
+          <div className={styles.statsBar}>
+            {allStats.map(s => (
+              <div key={s.label} className={styles.statItem}>
+                <span className={styles.statValue}>{s.value}</span>
+                <span className={styles.statLabel}>{s.label}</span>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── Stats ── */}
-      <section className={styles.statsSection}>
-        <div className={styles.statsGrid}>
-          {/* Dynamic gym days */}
-          <div className={styles.statCard}>
-            <span className={styles.statValue}>{punched}/{totalDays}</span>
-            <span className={styles.statLabel}>Days punching in the gym</span>
-          </div>
-
-          {/* Static stats */}
-          {staticStats.map(s => (
-            <div key={s.label} className={styles.statCard}>
-              <span className={styles.statValue}>{s.value}</span>
-              <span className={styles.statLabel}>{s.label}</span>
-            </div>
-          ))}
         </div>
       </section>
 
