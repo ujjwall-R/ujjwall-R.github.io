@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <title>From the Library of Ujjwal Raj</title>
     <script>
-      // SPA redirect for GitHub Pages
-      // Converts /read -> /?p=/read so index.html can restore it
+      // GitHub Pages SPA fallback — redirect ?/path so index.html can restore it
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1).join('/') +
-        '/?p=' + encodeURIComponent(l.pathname + l.search) +
-        (l.hash || '')
+        '/?/' + l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
       );
     </script>
   </head>
