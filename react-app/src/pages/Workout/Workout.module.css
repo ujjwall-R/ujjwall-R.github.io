@@ -73,6 +73,13 @@
   margin-bottom: 2rem;
 }
 
+.heroSub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.75rem;
+  font-style: italic;
+}
+
 /* ── Activity pills ──────────────────────────────────────── */
 .activities {
   display: flex;
