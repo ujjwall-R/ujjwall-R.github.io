@@ -1,25 +1,28 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import styles from './JoinClub.module.css'
+import { books } from '../../data/books'
 
 const FORM_ID  = '1FAIpQLSdGZmDPR-zvlmn2kVpCH-kPBfb9s66BF9NCuuPZt72ltTiQvg'
 const ENTRY_ID = 'entry.1770641203'
 const ACTION   = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`
 
-const BACKGROUNDS = [
-  '/images/ddia.png',
-  '/images/systemDesign.png',
-  '/images/carch.png',
-  '/images/llm.png',
-  '/images/0to1.png',
-  '/images/artofstat.png',
-  '/images/twa.png',
-  '/images/bcsd.png',
-]
+const STRIP_COUNT = 8
+
+function pickRandom(arr, n) {
+  const unique = [...new Set(arr.filter(Boolean))]
+  return unique.sort(() => Math.random() - 0.5).slice(0, n)
+}
 
 export default function JoinClub() {
   const [email, setEmail]     = useState('')
   const [status, setStatus]   = useState('idle')
   const [touched, setTouched] = useState(false)
+
+  // Pick 8 random book covers once per mount
+  const bgImages = useMemo(
+    () => pickRandom(books.map(b => b.image), STRIP_COUNT),
+    []
+  )
 
   const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 
@@ -45,7 +48,7 @@ export default function JoinClub() {
     <section className={styles.hero}>
       {/* Book cover strip background */}
       <div className={styles.bookStrip} aria-hidden="true">
-        {BACKGROUNDS.map((src) => (
+        {bgImages.map((src) => (
           <img key={src} src={src} alt="" className={styles.stripImg} />
         ))}
       </div>

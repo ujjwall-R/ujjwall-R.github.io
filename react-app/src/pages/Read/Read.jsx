@@ -28,10 +28,8 @@ export default function Read() {
               challenges in security and distributed systems.
             </p>
             <p className={styles.bio}>
-              I enjoy reading and teaching, both software and physics, and actively share
-              my learnings through discussions, writing, and open collaboration. Over the
-              years, I have read 15+ software engineering books across systems, architecture,
-              artificial intelligence, and design.
+              I enjoy reading and teaching, both software and physics, and love sharing what I learn.
+              I read books, review them, and maintain this library as a living record of everything I have worked through.
             </p>
             <p className={styles.bio}>
               Welcome to my library. Feel free to reach out if you'd like to discuss ideas,

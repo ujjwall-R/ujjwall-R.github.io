@@ -33,11 +33,11 @@
 }
 
 .name {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
   color: var(--color-text);
   margin-bottom: 0.75rem;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .bio {
