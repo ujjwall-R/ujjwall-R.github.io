@@ -42,7 +42,7 @@ export default function Workout() {
         <div className={styles.heroContent}>
           <div className={styles.heroTop}>
             <p className={styles.eyebrow}>Active life</p>
-            <h1 className={styles.heroTitle}>Sweat.</h1>
+            <h1 className={styles.heroTitle}>Sweat</h1>
             <p className={styles.heroSub}>The work doesn't stop at the desk.</p>
             <div className={styles.activities}>
               {activities.map(a => (
