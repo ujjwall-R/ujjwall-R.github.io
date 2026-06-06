@@ -1,6 +1,7 @@
 import BookGrid from '../../components/BookGrid/BookGrid'
 import BlogRow from '../../components/BlogRow/BlogRow'
 import UrlCycler from '../../components/UrlCycler/UrlCycler'
+import JoinClub from '../../components/JoinClub/JoinClub'
 import { blogs } from '../../data/blogs'
 import styles from './Read.module.css'
 
@@ -45,6 +46,9 @@ export default function Read() {
           </div>
         </div>
       </section>
+
+      {/* Reading club CTA */}
+      <JoinClub />
 
       <div className={styles.content}>
         {/* Books section */}
