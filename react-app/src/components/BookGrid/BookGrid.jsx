@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { books } from '../../data/books'
 import BookCard from '../BookCard/BookCard'
 import BookModal from '../BookModal/BookModal'
@@ -16,21 +16,46 @@ const SHELVES = [
   { key: 'NonTech', label: 'Non-Tech Books' },
 ]
 
+const SCROLL_BY = 600
+
 function sortBooks(list, sortKey) {
   if (!sortKey) return list
   return [...list].sort((a, b) => b.ratings[sortKey] - a.ratings[sortKey])
 }
 
 function Shelf({ label, books, onSelect }) {
+  const trackRef = useRef(null)
+
+  const scroll = (dir) => {
+    trackRef.current?.scrollBy({ left: dir * SCROLL_BY, behavior: 'smooth' })
+  }
+
   return (
     <div className={styles.shelf}>
       <h3 className={styles.shelfTitle}>{label}</h3>
-      <div className={styles.track}>
-        {books.map((book) => (
-          <div key={book.title} className={styles.cardWrap}>
-            <BookCard {...book} onClick={() => onSelect(book)} />
-          </div>
-        ))}
+
+      <div className={styles.trackWrap}>
+        {/* left fade + arrow */}
+        <div className={`${styles.fade} ${styles.fadeLeft}`}>
+          <button className={styles.arrow} onClick={() => scroll(-1)} aria-label="Scroll left">
+            ‹
+          </button>
+        </div>
+
+        <div className={styles.track} ref={trackRef}>
+          {books.map((book) => (
+            <div key={book.title} className={styles.cardWrap}>
+              <BookCard {...book} onClick={() => onSelect(book)} />
+            </div>
+          ))}
+        </div>
+
+        {/* right fade + arrow */}
+        <div className={`${styles.fade} ${styles.fadeRight}`}>
+          <button className={styles.arrow} onClick={() => scroll(1)} aria-label="Scroll right">
+            ›
+          </button>
+        </div>
       </div>
     </div>
   )
