@@ -4,7 +4,7 @@ import styles from './Layout.module.css'
 const ROUTE_LABELS = {
   '/read':    'Read',
   '/build':   'Build',
-  '/workout': 'Sweat',
+  '/sweat': 'Sweat',
   '/click':   'Click',
 }
 
@@ -21,7 +21,7 @@ export default function Layout() {
         <nav className={styles.nav}>
           <Link to="/read">Read</Link>
           <Link to="/build">Build</Link>
-          <Link to="/workout">Sweat</Link>
+          <Link to="/sweat">Sweat</Link>
           <Link to="/click">Click</Link>
         </nav>
       </header>

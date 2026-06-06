@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       { path: '/',        element: <Navigate to="/read" replace /> },
       { path: '/read',    element: <Read /> },
       { path: '/build',   element: <Build /> },
-      { path: '/workout', element: <Workout /> },
+      { path: '/sweat',   element: <Workout /> },
       { path: '/click',   element: <Click /> },
       { path: '*',        element: <NotFound /> },
     ],

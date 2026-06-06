@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './UrlCycler.module.css'
 
 const BASE    = 'ujjwalraj.com'
-const SLUGS   = ['/read', '/build', '/workout', '/click']
+const SLUGS   = ['/read', '/build', '/sweat', '/click']
 const TYPE_MS = 80   // ms per character typed
 const DEL_MS  = 50   // ms per character deleted
 const PAUSE   = 1600 // ms to hold before deleting
