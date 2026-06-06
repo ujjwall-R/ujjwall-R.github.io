@@ -24,10 +24,9 @@ export const punchConfig = {
 
 // ── Collage images ────────────────────────────────────────
 export const collageImages = [
-  { src: '/images/sweat-gym1.png',    alt: 'Strength training', cropFace: true },
-  { src: '/images/sweat-swim.png',    alt: 'Swimming',          cropFace: false },
-  { src: '/images/sweat-gym2.png',    alt: 'Gym',               cropFace: true },
-  { src: '/images/sweat-cycle.png',   alt: 'Cycling',           cropFace: false },
-  { src: '/images/sweat-mirror.png',  alt: 'Post gym',          cropFace: true },
-  { src: '/images/sweat-machine.png', alt: 'Machine training',  cropFace: false },
+  { src: '/images/sweat-swim.png',    alt: 'Swimming',          cropFace: false, objectPosition: '90% 100%'  },
+  { src: '/images/sweat-gym2.png',    alt: 'Gym',               cropFace: true,  objectPosition: '95% 100%'  },
+  { src: '/images/sweat-cycle.png',   alt: 'Cycling',           cropFace: false, objectPosition: 'center top' },
+  { src: '/images/sweat-mirror.png',  alt: 'Post gym',          cropFace: true,  objectPosition: 'center 65%' },
+  { src: '/images/sweat-machine.png', alt: 'Machine training',  cropFace: false, objectPosition: '35% 55%'    },
 ]

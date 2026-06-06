@@ -20,13 +20,13 @@ export default function Workout() {
       {/* ── Hero with collage background ── */}
       <section className={styles.hero}>
         <div className={styles.collage} aria-hidden="true">
-          {collageImages.map(img => (
+          {[...collageImages, ...collageImages].map((img, i) => (
             <img
-              key={img.src}
+              key={i}
               src={img.src}
               alt={img.alt}
               className={styles.collageImg}
-              style={img.cropFace ? { objectPosition: 'center 65%' } : undefined}
+              style={{ objectPosition: img.objectPosition }}
             />
           ))}
         </div>

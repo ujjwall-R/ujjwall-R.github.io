@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-/* ── 4-image horizontal strip ────────────────────────────── */
+/* ── horizontal strip ────────────────────────────────────── */
 .collage {
   position: absolute;
   inset: 0;
@@ -25,6 +25,11 @@
   object-fit: cover;
   object-position: center top;
   filter: brightness(0.55) saturate(0.8);
+}
+
+/* hide duplicates on desktop */
+.collageImg:nth-child(n+6) {
+  display: none;
 }
 
 
@@ -134,16 +139,25 @@
     min-height: 80vh;
   }
 
-  /* 2 columns × 3 rows on mobile */
+  /* auto-scrolling strip on mobile */
   .collage {
-    flex-wrap: wrap;
+    width: max-content;
+    animation: scrollStrip 18s linear infinite;
   }
 
   .collageImg {
-    flex: 0 0 50%;
-    height: calc(80vh / 3);
+    flex: 0 0 55vw;
+    height: 100%;
+    display: block; /* show duplicates on mobile */
   }
+}
 
+@keyframes scrollStrip {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
   .heroContent {
     padding: 3rem 1.25rem;
   }
