@@ -1,0 +1,127 @@
+.page {
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+  padding: 4rem 2rem 3rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 20, 20, 0.95) 0%,
+    var(--color-bg) 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.heroContent {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.profileRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  border: 2px solid rgba(229, 9, 20, 0.5);
+  transform: scaleX(-1); /* mirrors image like the original site */
+}
+
+.heroText {
+  flex: 1;
+}
+
+.heroTitle {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.heroBio {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.heroLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.heroLinks a {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.heroLinks a:hover {
+  color: var(--color-accent);
+}
+
+/* ── Sections grid ───────────────────────────────────────── */
+.sections {
+  padding: 3rem 2rem 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.sectionsHeading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .hero {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .profileRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .heroBio {
+    margin: 0 auto 1.25rem;
+  }
+
+  .heroLinks {
+    justify-content: center;
+  }
+
+  .sections {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

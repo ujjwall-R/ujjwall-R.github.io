@@ -1,0 +1,60 @@
+import BookGrid from '../../components/BookGrid/BookGrid'
+import BlogRow from '../../components/BlogRow/BlogRow'
+import { blogs } from '../../data/blogs'
+import styles from './Read.module.css'
+
+export default function Read() {
+  return (
+    <div className={styles.page}>
+      {/* Profile header */}
+      <section className={styles.profile}>
+        <div className={styles.profileInner}>
+          <img
+            src="/images/photo.jpeg"
+            alt="Ujjwal Raj"
+            className={styles.avatar}
+          />
+          <div>
+            <h1 className={styles.name}>From the Library of Ujjwal Raj</h1>
+            <p className={styles.bio}>
+              I am an engineer with experience working across the spectrum, from fast-paced
+              startups to Fortune 100 Big Tech companies, building systems that handle
+              millions of users, designing intelligent, data-driven solutions, and tackling
+              challenges in security and distributed systems.
+            </p>
+            <p className={styles.bio}>
+              I enjoy reading and teaching, both software and physics, and actively share
+              my learnings through discussions, writing, and open collaboration. Over the
+              years, I have read 15+ software engineering books across systems, architecture,
+              artificial intelligence, and design.
+            </p>
+            <p className={styles.bio}>
+              Welcome to my library. Feel free to reach out if you'd like to discuss ideas,
+              learn together, or collaborate on something meaningful.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className={styles.content}>
+        {/* Books section */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Books</h2>
+          <BookGrid />
+        </section>
+
+        <hr className={styles.divider} />
+
+        {/* Blogs section */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Blogs</h2>
+          <div className={styles.blogList}>
+            {blogs.map((b) => (
+              <BlogRow key={b.link} {...b} />
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}

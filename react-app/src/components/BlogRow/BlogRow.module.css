@@ -1,0 +1,38 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.thumbnail {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background-color: var(--color-surface);
+}
+
+.title {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.row:hover .title {
+  color: var(--color-accent);
+}

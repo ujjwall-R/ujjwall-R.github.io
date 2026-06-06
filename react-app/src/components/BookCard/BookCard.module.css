@@ -1,0 +1,107 @@
+.card {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  cursor: default;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+/* ── Cover image ─────────────────────────────────────────── */
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.25s ease;
+}
+
+.card:hover .cover {
+  filter: brightness(0.35);
+}
+
+/* ── Hover overlay ───────────────────────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  overflow: hidden;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  /* clamp to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Ratings ─────────────────────────────────────────────── */
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ratingLabel {
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.stars {
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+}
+
+.starFilled {
+  color: var(--color-star);
+}
+
+.starEmpty {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Tags ────────────────────────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tag {
+  font-size: 0.55rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-text-muted);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+}
