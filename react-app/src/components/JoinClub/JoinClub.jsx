@@ -61,7 +61,7 @@ export default function JoinClub() {
         {/* Eagle side image */}
         <div className={styles.eagleSide} aria-hidden="true">
           <img
-            src="/images/justOneMorePage.png"
+            src="/images/justOneMorePage.webp"
             alt="Just One More Page"
             className={styles.eagleImg}
           />

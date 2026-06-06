@@ -15,7 +15,7 @@ export default function Read() {
       <section className={styles.profile}>
         <div className={styles.profileInner}>
           <img
-            src="/images/photo.jpeg"
+            src="/images/photo.webp"
             alt="Ujjwal Raj"
             className={styles.avatar}
           />

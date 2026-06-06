@@ -10,7 +10,7 @@ export const nonTechBooks = [
       "Practical applicability": 3,
     },
     tags: ["startup", "business", "entrepreneurship"],
-    image: "/images/0to1.png",
+    image: "/images/0to1.webp",
   },
   {
     title: "Truth Without Apology: For Those Tired of Sweet Lies",
@@ -23,6 +23,6 @@ export const nonTechBooks = [
       "Practical applicability": 4,
     },
     tags: ["philosophy", "self-awareness", "ego"],
-    image: "/images/twa.png",
+    image: "/images/twa.webp",
   },
 ]

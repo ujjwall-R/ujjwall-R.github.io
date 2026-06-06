@@ -10,7 +10,7 @@ export const techBooks = [
       "Practical applicability": 3,
     },
     tags: ["distributed-systems", "databases", "scalability", "system-design"],
-    image: "/images/ddia.png",
+    image: "/images/ddia.webp",
   },
   {
     title:
@@ -24,7 +24,7 @@ export const techBooks = [
       "Practical applicability": 4,
     },
     tags: ["software-architecture", "design-principles"],
-    image: "/images/bcsd.png",
+    image: "/images/bcsd.webp",
   },
   {
     title: "Clean Architecture",
@@ -42,7 +42,7 @@ export const techBooks = [
       "clean-architecture",
       "scalability",
     ],
-    image: "/images/carch.png",
+    image: "/images/carch.webp",
   },
   {
     title: "The Art of Statistics: Learning from Data",
@@ -55,7 +55,7 @@ export const techBooks = [
       "Practical applicability": 2,
     },
     tags: ["statistics", "data-analysis", "probability", "data-literacy"],
-    image: "/images/artofstat.png",
+    image: "/images/artofstat.webp",
   },
   {
     title: "Clean Code",
@@ -73,7 +73,7 @@ export const techBooks = [
       "best-practices",
       "maintainability",
     ],
-    image: "/images/ccode.png",
+    image: "/images/ccode.webp",
   },
   {
     title: "System Design Series by Alex Xu",
@@ -91,7 +91,7 @@ export const techBooks = [
       "backend-engineering",
       "interview-prep",
     ],
-    image: "/images/alexxu.png",
+    image: "/images/alexxu.webp",
   },
   {
     title: "Linux From Scratch",
@@ -109,7 +109,7 @@ export const techBooks = [
       "low-level",
       "systems-programming",
     ],
-    image: "/images/LFS.png",
+    image: "/images/LFS.webp",
   },
   {
     title:
@@ -123,7 +123,7 @@ export const techBooks = [
       "Practical applicability": 3,
     },
     tags: ["linux", "system-programming", "kernel", "c-programming"],
-    image: "/images/linuxsp.png",
+    image: "/images/linuxsp.webp",
   },
   {
     title: "Docker: Up & Running, 2nd Edition",
@@ -136,7 +136,7 @@ export const techBooks = [
       "Practical applicability": 5,
     },
     tags: ["docker", "containers", "devops", "infrastructure"],
-    image: "/images/docker.png",
+    image: "/images/docker.webp",
   },
   {
     title: "Understanding Distributed Systems",
@@ -154,7 +154,7 @@ export const techBooks = [
       "fault-tolerance",
       "system-architecture",
     ],
-    image: "/images/uds.png",
+    image: "/images/uds.webp",
   },
   {
     title: "Righting Software",
@@ -167,7 +167,7 @@ export const techBooks = [
       "Practical applicability": 5,
     },
     tags: ["system-design", "project-management"],
-    image: "/images/rs.png",
+    image: "/images/rs.webp",
   },
   {
     title: "Domain-Driven Design",
@@ -185,7 +185,7 @@ export const techBooks = [
       "architecture",
       "enterprise-systems",
     ],
-    image: "/images/ddd.png",
+    image: "/images/ddd.webp",
   },
   {
     title: "Building Applications with AI Agents",
@@ -203,7 +203,7 @@ export const techBooks = [
       "application-development",
       "artificial-intelligence",
     ],
-    image: "/images/bawaa.png",
+    image: "/images/bawaa.webp",
   },
   {
     title: "Build a Large Language Model (From Scratch)",
@@ -216,7 +216,7 @@ export const techBooks = [
       "Practical applicability": 1,
     },
     tags: ["machine-learning", "deep-learning", "llms", "neural-networks"],
-    image: "/images/llmfromscratch.png",
+    image: "/images/llmfromscratch.webp",
   },
   {
     title: "The Hundred-page Machine Learning Book",
@@ -234,7 +234,7 @@ export const techBooks = [
       "overview",
       "data-science",
     ],
-    image: "/images/100pgML.png",
+    image: "/images/100pgML.webp",
   },
   {
     title: "Cracking the Coding Interview",
@@ -252,6 +252,6 @@ export const techBooks = [
       "interview-prep",
       "problem-solving",
     ],
-    image: "/images/cci.png",
+    image: "/images/cci.webp",
   },
 ]

@@ -40,7 +40,7 @@ export default function Home() {
         <div className={styles.heroContent}>
           <div className={styles.profileRow}>
             <img
-              src="/images/photo.jpeg"
+              src="/images/photo.webp"
               alt="Ujjwal Raj"
               className={styles.avatar}
             />

@@ -1,16 +1,16 @@
 export const companies = [
   {
     name: 'Qualcomm',
-    logo: '/images/logo-qualcomm.png',
+    logo: '/images/logo-qualcomm.webp',
     current: true,
   },
   {
     name: 'Trimble',
-    logo: '/images/logo-trimble.png',
+    logo: '/images/logo-trimble.webp',
   },
   {
     name: 'Simpl',
-    logo: '/images/logo-simpl.png',
+    logo: '/images/logo-simpl.webp',
   },
 ]
 
@@ -58,7 +58,7 @@ export const education = [
     institution: 'IIT Kharagpur',
     degree: 'B.Tech',
     period: '2020 – 2024',
-    logo: '/images/IITKGP_logo.jpg',
+    logo: '/images/IITKGP_logo.webp',
   },
   {
     institution: 'Don Bosco Academy, Patna',
