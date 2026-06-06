@@ -22,8 +22,8 @@
 }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
@@ -33,7 +33,7 @@
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: 0.75rem;
@@ -46,6 +46,27 @@
   line-height: 1.7;
   margin-bottom: 0.6rem;
   max-width: 680px;
+}
+
+.profileContacts {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.profileContacts a {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  border: 1px solid rgba(0, 200, 150, 0.3);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.profileContacts a:hover {
+  background: rgba(0, 200, 150, 0.12);
+  color: #fff;
 }
 
 /* ── Content area ────────────────────────────────────────── */
@@ -94,6 +115,10 @@
 
   .bio {
     margin: 0 auto 0.6rem;
+  }
+
+  .profileContacts {
+    justify-content: center;
   }
 
   .content {

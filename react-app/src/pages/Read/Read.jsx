@@ -1,11 +1,15 @@
 import BookGrid from '../../components/BookGrid/BookGrid'
 import BlogRow from '../../components/BlogRow/BlogRow'
+import UrlCycler from '../../components/UrlCycler/UrlCycler'
 import { blogs } from '../../data/blogs'
 import styles from './Read.module.css'
 
 export default function Read() {
   return (
     <div className={styles.page}>
+      {/* Animated URL hero */}
+      <UrlCycler />
+
       {/* Profile header */}
       <section className={styles.profile}>
         <div className={styles.profileInner}>
@@ -32,6 +36,12 @@ export default function Read() {
               Welcome to my library. Feel free to reach out if you'd like to discuss ideas,
               learn together, or collaborate on something meaningful.
             </p>
+            <div className={styles.profileContacts}>
+              <a href="https://www.linkedin.com/in/ujjwal-raj-0442461bb/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.instagram.com/_ujjwal___raj" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="mailto:ujjwal.dev.to@gmail.com">Email</a>
+              <a href="https://topmate.io/ujjwalraj5798" target="_blank" rel="noopener noreferrer">Topmate</a>
+            </div>
           </div>
         </div>
       </section>

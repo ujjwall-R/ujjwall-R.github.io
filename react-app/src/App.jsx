@@ -1,6 +1,5 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import Home from './pages/Home/Home'
 import Read from './pages/Read/Read'
 import Build from './pages/Build/Build'
 import Workout from './pages/Workout/Workout'
@@ -11,7 +10,7 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      { path: '/',        element: <Home /> },
+      { path: '/',        element: <Navigate to="/read" replace /> },
       { path: '/read',    element: <Read /> },
       { path: '/build',   element: <Build /> },
       { path: '/workout', element: <Workout /> },
