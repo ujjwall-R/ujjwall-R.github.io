@@ -53,22 +53,6 @@ export const projects = [
   },
 ]
 
-export const education = [
-  {
-    institution: 'IIT Kharagpur',
-    degree: 'B.Tech',
-    period: '2020 – 2024',
-    logo: '/images/IITKGP_logo.webp',
-  },
-  {
-    institution: 'Don Bosco Academy, Patna',
-    degree: null,
-    period: '2011 – 2019',
-    logo: null,
-    initials: 'DB',
-  },
-]
-
 export const stats = [
   { value: '45M+', label: 'Users served' },
   { value: '$300K', label: 'Daily transactions' },
