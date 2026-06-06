@@ -12,9 +12,9 @@ function Stars({ value }) {
   )
 }
 
-export default function BookCard({ title, about, ratings, tags, image, category }) {
+export default function BookCard({ title, about, ratings, tags, image, category, onClick }) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={onClick} style={{ cursor: 'pointer' }}>
       <img src={image} alt={title} className={styles.cover} loading="lazy" />
       <div className={styles.overlay}>
         <h3 className={styles.title}>{title}</h3>

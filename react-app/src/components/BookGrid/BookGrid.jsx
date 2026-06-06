@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { books } from '../../data/books'
 import BookCard from '../BookCard/BookCard'
+import BookModal from '../BookModal/BookModal'
 import styles from './BookGrid.module.css'
 
 const SORTS = [
@@ -20,14 +21,14 @@ function sortBooks(list, sortKey) {
   return [...list].sort((a, b) => b.ratings[sortKey] - a.ratings[sortKey])
 }
 
-function Shelf({ label, books }) {
+function Shelf({ label, books, onSelect }) {
   return (
     <div className={styles.shelf}>
       <h3 className={styles.shelfTitle}>{label}</h3>
       <div className={styles.track}>
         {books.map((book) => (
           <div key={book.title} className={styles.cardWrap}>
-            <BookCard {...book} />
+            <BookCard {...book} onClick={() => onSelect(book)} />
           </div>
         ))}
       </div>
@@ -37,6 +38,7 @@ function Shelf({ label, books }) {
 
 export default function BookGrid() {
   const [sortKey, setSortKey] = useState('')
+  const [selectedBook, setSelectedBook] = useState(null)
 
   return (
     <div className={styles.container}>
@@ -58,8 +60,19 @@ export default function BookGrid() {
           books.filter((b) => b.category === key),
           sortKey
         )
-        return <Shelf key={key} label={label} books={shelfBooks} />
+        return (
+          <Shelf
+            key={key}
+            label={label}
+            books={shelfBooks}
+            onSelect={setSelectedBook}
+          />
+        )
       })}
+
+      {selectedBook && (
+        <BookModal book={selectedBook} onClose={() => setSelectedBook(null)} />
+      )}
     </div>
   )
 }

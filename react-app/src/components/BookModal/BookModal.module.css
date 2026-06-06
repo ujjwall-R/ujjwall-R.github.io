@@ -1,0 +1,195 @@
+/* ── Backdrop ────────────────────────────────────────────── */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+/* ── Modal card ──────────────────────────────────────────── */
+.modal {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  animation: slideUp 0.2s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0 }
+  to   { transform: translateY(0);    opacity: 1 }
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1) 0%,
+    rgba(0,0,0,0.15) 40%,
+    rgba(26,26,26,0.95) 100%
+  );
+}
+
+/* ── Close button ────────────────────────────────────────── */
+.closeBtn {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: rgba(0,0,0,0.85);
+  border-color: #fff;
+}
+
+/* ── Hero meta (title + tags over image) ─────────────────── */
+.heroMeta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 1.5rem 1rem;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 0.65rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--color-text);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(4px);
+}
+
+/* ── Body ────────────────────────────────────────────────── */
+.body {
+  padding: 1.25rem 1.5rem 1.75rem;
+}
+
+.about {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Ratings ─────────────────────────────────────────────── */
+.ratingsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 1.1rem;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ratingLabel {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.stars {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.starFilled {
+  color: var(--color-star);
+}
+
+.starEmpty {
+  color: rgba(255,255,255,0.2);
+}
+
+.ratingNum {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  margin-left: auto;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal {
+    max-width: 100%;
+    border-radius: 14px 14px 0 0;
+    max-height: 92vh;
+  }
+
+  .ratingLabel {
+    width: 130px;
+  }
+}
