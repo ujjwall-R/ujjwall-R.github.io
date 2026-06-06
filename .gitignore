@@ -1,1 +1,28 @@
 Profile.pdf
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Env files
+.env
+.env.*
+!.env.example
+*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs & temp
+*.log
+*.tmp
+*.swp
+
+# Test coverage
+coverage/

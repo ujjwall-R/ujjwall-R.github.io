@@ -1,6 +1,7 @@
 export const techBooks = [
   {
     title: "Designing Data-Intensive Applications",
+    author: "Martin Kleppmann",
     about:
       "Covers scalable, reliable, and maintainable distributed systems. A single resource for almost everything about distributed systems. I believe it is worth reading twice or even thrice (my personal opinion).",
     category: "Tech",
@@ -15,6 +16,7 @@ export const techBooks = [
   {
     title:
       "Balancing Coupling in Software Design: Universal Design Principles for Architecting Modular Software Systems",
+    author: "Vlad Khononov",
     about:
       "A practical exploration of coupling in software systems, how to strike the right balance between flexibility and maintainability. This piece breaks down universal design principles that help architects build modular, scalable systems without over-engineering or creating rigid dependencies.",
     category: "Tech",
@@ -28,6 +30,7 @@ export const techBooks = [
   },
   {
     title: "Clean Architecture",
+    author: "Robert C. Martin",
     about:
       "One of the best and few resources that explains the SOLID principles in detail. Uncle Bob presents a unique and effective way of organizing a codebase.",
     category: "Tech",
@@ -46,6 +49,7 @@ export const techBooks = [
   },
   {
     title: "The Art of Statistics: Learning from Data",
+    author: "David Spiegelhalter",
     about:
       "An interesting book where the author shows how data speaks in day-to-day life, even before the advent of strong AI tools. The story of data analysis is engaging. It requires a good interest in maths and probability to fully enjoy it.",
     category: "Tech",
@@ -59,6 +63,7 @@ export const techBooks = [
   },
   {
     title: "Clean Code",
+    author: "Robert C. Martin",
     about:
       "Improves the practice of writing good and clean code. It helps junior engineers ship code to production faster. A must-read for all beginners.",
     category: "Tech",
@@ -77,6 +82,7 @@ export const techBooks = [
   },
   {
     title: "System Design Series by Alex Xu",
+    author: "Alex Xu",
     about:
       "Although it is positioned as an interview resource, I personally loved the way Alex lucidly explains the requirements of building good backend systems. A must-read for all backend developers.",
     category: "Tech",
@@ -95,6 +101,7 @@ export const techBooks = [
   },
   {
     title: "Linux From Scratch",
+    author: "Gerard Beekmans",
     about:
       "Build a Linux OS manually to understand its internals deeply. This feels more like documentation and a hands-on journey.",
     category: "Tech",
@@ -114,6 +121,7 @@ export const techBooks = [
   {
     title:
       "Linux System Programming: Talking Directly to the Kernel and C Library",
+    author: "Robert Love",
     about:
       "A good resource to understand the fundamentals of system programming in C and the interfaces of the kernel. This book is not related to kernel development.",
     category: "Tech",
@@ -127,6 +135,7 @@ export const techBooks = [
   },
   {
     title: "Docker: Up & Running, 2nd Edition",
+    author: "Sean Kane & Karl Matthias",
     about:
       "A solid introduction to Docker and containerization. Covers the full lifecycle of building, shipping, and running containers in production. Great for engineers who want to understand containers beyond just running commands.",
     category: "Tech",
@@ -140,6 +149,7 @@ export const techBooks = [
   },
   {
     title: "Understanding Distributed Systems",
+    author: "Roberto Vitillo",
     about:
       "I recommend this book to everyone who wants to read Martin Kleppmann's DDIA. It is a very good starting point before the Red Book.",
     category: "Tech",
@@ -158,6 +168,7 @@ export const techBooks = [
   },
   {
     title: "Righting Software",
+    author: "Juval Löwy",
     about:
       "This book is divided into two parts—System Design and Project Management. Juval Lowey introduces volatility-based decomposition as an alternative to functional decomposition. It is a fantastic read. The second part is pending for my second read.",
     category: "Tech",
@@ -171,6 +182,7 @@ export const techBooks = [
   },
   {
     title: "Domain-Driven Design",
+    author: "Eric Evans",
     about:
       "A must-read for all software developers. A senior architect recommended it to me, and I am always thankful. It will improve your skills in detailed design.",
     category: "Tech",
@@ -189,6 +201,7 @@ export const techBooks = [
   },
   {
     title: "Building Applications with AI Agents",
+    author: "Brian Bichsel & Michael Albada",
     about:
       "A practical guide to designing and building production-ready AI agent applications. I picked this up as part of being in a reading club. Covers agent architectures, tool use, memory, and multi-agent orchestration.",
     category: "Tech",
@@ -207,6 +220,7 @@ export const techBooks = [
   },
   {
     title: "Build a Large Language Model (From Scratch)",
+    author: "Sebastian Raschka",
     about:
       "Recommended for anyone who has the zeal to understand how modern-day LLMs function. The author builds a GPT-2 model in the book, making it a hands-on experience. One big advantage is that it gives you a strong head start in understanding research papers published by Gemini, OpenAI, or Meta, making those reads more satisfying.",
     category: "Tech",
@@ -220,6 +234,7 @@ export const techBooks = [
   },
   {
     title: "The Hundred-page Machine Learning Book",
+    author: "Andriy Burkov",
     about:
       "I read this during college. It is a good beginner resource for anyone who wants to learn the basics of AI and ML. Make sure to take notes or at least underline important sections. You will not regret reading it if you have an interest in basic maths.",
     category: "Tech",
@@ -238,6 +253,7 @@ export const techBooks = [
   },
   {
     title: "Cracking the Coding Interview",
+    author: "Gayle Laakmann McDowell",
     about:
       "Recommended for beginners targeting algorithm interviews. A good resource to cover the basics of OOP.",
     category: "Tech",

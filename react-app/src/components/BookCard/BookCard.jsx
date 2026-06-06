@@ -12,12 +12,13 @@ function Stars({ value }) {
   )
 }
 
-export default function BookCard({ title, about, ratings, tags, image, category, onClick }) {
+export default function BookCard({ title, author, about, ratings, tags, image, category, onClick }) {
   return (
     <div className={styles.card} onClick={onClick} style={{ cursor: 'pointer' }}>
       <img src={image} alt={title} className={styles.cover} loading="lazy" />
       <div className={styles.overlay}>
         <h3 className={styles.title}>{title}</h3>
+        {author && <p className={styles.author}>{author}</p>}
         <div className={styles.ratings}>
           {Object.entries(ratings).map(([label, val]) => (
             <div key={label} className={styles.ratingRow}>

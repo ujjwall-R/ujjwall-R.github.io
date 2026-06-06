@@ -40,6 +40,7 @@ export default function BookModal({ book, onClose }) {
           </button>
           <div className={styles.heroMeta}>
             <h2 className={styles.title}>{book.title}</h2>
+            {book.author && <p className={styles.author}>{book.author}</p>}
             <div className={styles.tags}>
               <span className={styles.tag}>{book.category === 'NonTech' ? 'Non-Tech' : 'Tech'}</span>
               {book.tags.map((t) => (
