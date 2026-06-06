@@ -201,7 +201,7 @@ export const techBooks = [
   },
   {
     title: "Building Applications with AI Agents",
-    author: "Brian Bichsel & Michael Albada",
+    author: "Michael Albada",
     about:
       "A practical guide to designing and building production-ready AI agent applications. I picked this up as part of being in a reading club. Covers agent architectures, tool use, memory, and multi-agent orchestration.",
     category: "Tech",

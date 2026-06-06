@@ -15,7 +15,7 @@ export const nonTechBooks = [
   },
   {
     title: "Truth Without Apology: For Those Tired of Sweet Lies",
-    author: "Swami Parthasarathy",
+    author: "Acharya Prashant",
     about:
       "Bought this at Mumbai Airport and I am forever grateful. The more you read, the more your ego breaks down. The short chapters awaken something within you.",
     category: "NonTech",
