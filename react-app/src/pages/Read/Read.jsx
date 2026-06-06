@@ -22,10 +22,7 @@ export default function Read() {
           <div>
             <h1 className={styles.name}>From the Library of Ujjwal Raj</h1>
             <p className={styles.bio}>
-              I am an engineer with experience working across the spectrum, from fast-paced
-              startups to Fortune 100 Big Tech companies, building systems that handle
-              millions of users, designing intelligent, data-driven solutions, and tackling
-              challenges in security and distributed systems.
+              Engineer. I have worked at startups and Big Tech, on systems, security, and AI.
             </p>
             <p className={styles.bio}>
               I enjoy reading and teaching, both software and physics, and love sharing what I learn.
