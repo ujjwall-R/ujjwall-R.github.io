@@ -12,8 +12,8 @@ const SORTS = [
 ]
 
 const SHELVES = [
-  { key: 'Tech',    label: 'Tech Books' },
-  { key: 'NonTech', label: 'Non-Tech Books' },
+  { key: 'Tech',    label: 'STEM' },
+  { key: 'NonTech', label: 'Others' },
 ]
 
 const SCROLL_BY = 600

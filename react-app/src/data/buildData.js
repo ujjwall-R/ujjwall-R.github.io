@@ -54,6 +54,6 @@ export const projects = [
 ]
 
 export const stats = [
-  { value: '45M+', label: 'Users served' },
+  { value: '65M+', label: "Users across systems I've engineered" },
   { value: '$300K', label: 'Daily transactions' },
 ]

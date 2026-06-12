@@ -27,9 +27,11 @@
   filter: brightness(0.55) saturate(0.8);
 }
 
-/* hide duplicates on desktop */
-.collageImg:nth-child(n+6) {
-  display: none;
+/* hide duplicates on desktop — mobile needs them for the seamless loop */
+@media (min-width: 601px) {
+  .collageImg:nth-child(n+6) {
+    display: none;
+  }
 }
 
 /* ── Overlay ─────────────────────────────────────────────── */
@@ -149,6 +151,8 @@
   .collage {
     width: max-content;
     animation: scrollStrip 18s linear infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .collageImg {
@@ -167,6 +171,6 @@
 }
 
 @keyframes scrollStrip {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translateZ(0) translateX(0); }
+  to   { transform: translateZ(0) translateX(calc(-55vw * 5)); }
 }

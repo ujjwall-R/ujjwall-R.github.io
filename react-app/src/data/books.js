@@ -1,7 +1,7 @@
-export { techBooks } from './techBooks'
-export { nonTechBooks } from './nonTechBooks'
+export { techBooks } from './stemBooks'
+export { nonTechBooks } from './othersBooks'
 
-import { techBooks } from './techBooks'
-import { nonTechBooks } from './nonTechBooks'
+import { techBooks } from './stemBooks'
+import { nonTechBooks } from './othersBooks'
 
 export const books = [...techBooks, ...nonTechBooks]
