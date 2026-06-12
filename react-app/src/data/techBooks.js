@@ -270,4 +270,17 @@ export const techBooks = [
     ],
     image: "/images/cci.webp",
   },
+  {
+    title: "Kubernetes: Up and Running",
+    author: "Brendan Burns, Joe Beda & Kelsey Hightower",
+    about: "This one is a follow-up to *Docker: Up & Running*. I picked it up because my professional work involves a lot of Docker and Kubernetes. It's a great book for understanding concepts from the basics to advanced topics, with plenty of hands-on examples.",
+    category: "Tech",
+    ratings: {
+      "Beginner friendly": 2,
+      "Conceptual depth": 3,
+      "Practical applicability": 4,
+    },
+    tags: ["kubernetes", "containers", "devops", "cloud-native"],
+    image: "/images/kubernetes-up-and-running.webp",
+  },
 ]

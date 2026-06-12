@@ -32,7 +32,10 @@ function Shelf({ label, books, onSelect }) {
 
   return (
     <div className={styles.shelf}>
-      <h3 className={styles.shelfTitle}>{label}</h3>
+      <div className={styles.shelfHeader}>
+        <h3 className={styles.shelfTitle}>{label}</h3>
+        <span className={styles.shelfHint}>tap on any to see what I think</span>
+      </div>
 
       <div className={styles.trackWrap}>
         {/* left fade + arrow */}

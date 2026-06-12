@@ -27,4 +27,17 @@ export const nonTechBooks = [
     tags: ["philosophy", "self-awareness", "ego"],
     image: "/images/twa.webp",
   },
+  {
+    title: "I Will Teach You to Be Rich",
+    author: "Ramit Sethi",
+    about: "An interesting book by Ramit Sethi. Much of the content is centered around the U.S. banking and financial system, but many of the underlying principles can be adapted to the Indian context if you're willing to map them to local products and practices.",
+    category: "NonTech",
+    ratings: {
+      "Beginner friendly": 5,
+      "Conceptual depth": 4,
+      "Practical applicability": 5,
+    },
+    tags: ["personal-finance", "money", "investing"],
+    image: "/images/i-will-teach-you-to-be-rich.webp",
+  },
 ]
