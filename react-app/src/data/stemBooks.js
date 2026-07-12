@@ -29,6 +29,25 @@ export const techBooks = [
     image: "/images/bcsd.webp",
   },
   {
+    title: "I Heart Logs",
+    author: "Jay Kreps",
+    about:
+      "Written by Jay Kreps, the CEO of Confluent and one of the builders of Apache Kafka. It is a very short book for understanding event-driven systems and how logs are useful, and it can be completed in a couple of reading sessions. I recommend this to everyone interested in event sourcing and distributed systems.",
+    category: "Tech",
+    ratings: {
+      "Beginner friendly": 5,
+      "Conceptual depth": 4,
+      "Practical applicability": 4,
+    },
+    tags: [
+      "event-sourcing",
+      "stream-processing",
+      "distributed-systems",
+      "kafka",
+    ],
+    image: "/images/iheartlogs.webp",
+  },
+  {
     title: "Clean Architecture",
     author: "Robert C. Martin",
     about:
