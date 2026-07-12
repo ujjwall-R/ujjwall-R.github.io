@@ -2,6 +2,7 @@ import BookGrid from '../../components/BookGrid/BookGrid'
 import BlogRow from '../../components/BlogRow/BlogRow'
 import UrlCycler from '../../components/UrlCycler/UrlCycler'
 import JoinClub from '../../components/JoinClub/JoinClub'
+import ToBeRead from '../../components/ToBeRead/ToBeRead'
 import { blogs } from '../../data/blogs'
 import styles from './Read.module.css'
 
@@ -50,6 +51,14 @@ export default function Read() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Books</h2>
           <BookGrid />
+        </section>
+
+        <hr className={styles.divider} />
+
+        {/* To Be Read section */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>To Be Read</h2>
+          <ToBeRead />
         </section>
 
         <hr className={styles.divider} />
