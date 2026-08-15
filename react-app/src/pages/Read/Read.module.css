@@ -28,7 +28,6 @@
   object-fit: cover;
   object-position: top;
   flex-shrink: 0;
-  transform: scaleX(-1);
   border: 2px solid rgba(0, 200, 150, 0.4);
 }
 
