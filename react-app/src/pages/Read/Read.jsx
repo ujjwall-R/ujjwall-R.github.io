@@ -23,7 +23,7 @@ export default function Read() {
           <div>
             <h1 className={styles.name}>From the Library of Ujjwal Raj</h1>
             <p className={styles.bio}>
-              Engineer. I have worked at startups and Big Tech, on systems, security, and AI.
+              I am a software engineer with experience at startups and Big Tech, working across systems, security, and AI.
             </p>
             <p className={styles.bio}>
               I enjoy reading and teaching, both software and physics, and love sharing what I learn.
