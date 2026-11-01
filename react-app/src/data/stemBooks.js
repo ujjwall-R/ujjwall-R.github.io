@@ -271,6 +271,33 @@ export const techBooks = [
     image: "/images/100pgML.webp",
   },
   {
+    title: "Algorithms to Live By: The Computer Science of Human Decisions",
+    author: "Brian Christian & Tom Griffiths",
+    about:
+      "This is more of a fun book about a branch of computer science and how some of its applications and algorithms can help us make rational decisions. The most interesting part of this book was the Bayesian section. I expected more depth in the topics, probably because I come from an engineering and maths background. It often pushed me to Google some proofs and calculations while reading.",
+    category: "Tech",
+    ratings: {
+      "Beginner friendly": 3,
+      "Conceptual depth": 1,
+      "Practical applicability": 5,
+    },
+    tags: ["decision-making", "psychology", "problem-solving", "everyday-life"],
+    image: "/images/algorithmstoliveby.webp",
+  },
+  {
+    title: "Kubernetes: Up and Running",
+    author: "Brendan Burns, Joe Beda & Kelsey Hightower",
+    about: "This one is a follow-up to *Docker: Up & Running*. I picked it up because my professional work involves a lot of Docker and Kubernetes. It's a great book for understanding concepts from the basics to advanced topics, with plenty of hands-on examples.",
+    category: "Tech",
+    ratings: {
+      "Beginner friendly": 2,
+      "Conceptual depth": 3,
+      "Practical applicability": 4,
+    },
+    tags: ["kubernetes", "containers", "devops", "cloud-native"],
+    image: "/images/kubernetes-up-and-running.webp",
+  },
+  {
     title: "Cracking the Coding Interview",
     author: "Gayle Laakmann McDowell",
     about:
@@ -288,18 +315,5 @@ export const techBooks = [
       "problem-solving",
     ],
     image: "/images/cci.webp",
-  },
-  {
-    title: "Kubernetes: Up and Running",
-    author: "Brendan Burns, Joe Beda & Kelsey Hightower",
-    about: "This one is a follow-up to *Docker: Up & Running*. I picked it up because my professional work involves a lot of Docker and Kubernetes. It's a great book for understanding concepts from the basics to advanced topics, with plenty of hands-on examples.",
-    category: "Tech",
-    ratings: {
-      "Beginner friendly": 2,
-      "Conceptual depth": 3,
-      "Practical applicability": 4,
-    },
-    tags: ["kubernetes", "containers", "devops", "cloud-native"],
-    image: "/images/kubernetes-up-and-running.webp",
   },
 ]
